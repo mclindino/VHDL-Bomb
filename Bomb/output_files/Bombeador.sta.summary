@@ -1,0 +1,117 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock_ini'
+Slack : -8.325
+TNS   : -986.888
+
+Type  : Slow Model Setup 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : -7.157
+TNS   : -121.783
+
+Type  : Slow Model Setup 'Definir_TIME:DEFINIR_TEMPO|Divisor_Freq:DIV|COUT'
+Slack : -2.103
+TNS   : -27.447
+
+Type  : Slow Model Setup 'TEMPO'
+Slack : 1.507
+TNS   : 0.000
+
+Type  : Slow Model Hold 'TEMPO'
+Slack : -2.777
+TNS   : -32.765
+
+Type  : Slow Model Hold 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'Definir_TIME:DEFINIR_TEMPO|Divisor_Freq:DIV|COUT'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clock_ini'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : -1.780
+TNS   : -27.821
+
+Type  : Slow Model Removal 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : 1.076
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock_ini'
+Slack : -1.380
+TNS   : -225.380
+
+Type  : Slow Model Minimum Pulse Width 'TEMPO'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : -0.500
+TNS   : -19.000
+
+Type  : Slow Model Minimum Pulse Width 'Definir_TIME:DEFINIR_TEMPO|Divisor_Freq:DIV|COUT'
+Slack : -0.500
+TNS   : -16.000
+
+Type  : Fast Model Setup 'clock_ini'
+Slack : -3.289
+TNS   : -338.036
+
+Type  : Fast Model Setup 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : -3.093
+TNS   : -51.717
+
+Type  : Fast Model Setup 'Definir_TIME:DEFINIR_TEMPO|Divisor_Freq:DIV|COUT'
+Slack : -0.476
+TNS   : -5.232
+
+Type  : Fast Model Setup 'TEMPO'
+Slack : 1.104
+TNS   : 0.000
+
+Type  : Fast Model Hold 'TEMPO'
+Slack : -1.100
+TNS   : -12.419
+
+Type  : Fast Model Hold 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'Definir_TIME:DEFINIR_TEMPO|Divisor_Freq:DIV|COUT'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clock_ini'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : -0.439
+TNS   : -6.677
+
+Type  : Fast Model Removal 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock_ini'
+Slack : -1.380
+TNS   : -225.380
+
+Type  : Fast Model Minimum Pulse Width 'TEMPO'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'Contador_Sincrono_Dividido:Contador_final|Divisor_Freq:Divisor|COUT'
+Slack : -0.500
+TNS   : -19.000
+
+Type  : Fast Model Minimum Pulse Width 'Definir_TIME:DEFINIR_TEMPO|Divisor_Freq:DIV|COUT'
+Slack : -0.500
+TNS   : -16.000
+
+------------------------------------------------------------

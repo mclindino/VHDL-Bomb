@@ -1,0 +1,49 @@
+Library IEEE;
+use IEEE.std_logic_1164.all;
+
+ entity divisordefreq is
+	 port (
+		 CLK: in STD_LOGIC;
+		 COUT: out STD_LOGIC
+		 );
+ end divisordefreq; 
+
+ architecture arc_Divider of divisordefreq is 
+
+ constant TIMECONST : integer := 69;
+
+ signal count0, count1, count2, count3: integer range 0 to 1000 := 0;
+
+ signal D: STD_LOGIC := '0';
+
+ begin 
+	 process (CLK)
+	 begin
+		 if (CLK'event and CLK = '1') then
+			if(sel = "10") then
+				count0 <= count0 + 1 * 2;
+			elsif(sel = "11") then
+				count0 <= count0 + 1 * 4;
+			elsif sel = "01" then
+				count0 <= count0 + 1;
+			if (count0 >= TIMECONST) then
+				count0 <= 0;
+				count1 <= count1 + 1;
+			elsif (count1 >= TIMECONST) then
+				count1 <= 0;
+				count2 <= count2 + 1;
+			elsif (count2 >= TIMECONST) then
+				count2 <= 0;
+				count3 <= count3 + 1;
+			elsif (count3 >= TIMECONST) then
+				count3 <= 0;
+				D <= not D;
+			end if;
+		end if;
+		if sel = "00" then
+			COUT <= '0';
+		else
+			COUT <= D;
+		end if;
+	end process;
+end arc_Divider;

@@ -1,0 +1,35 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE IEEE.std_logic_arith.all;
+USE IEEE.std_logic_unsigned.all;
+
+ENTITY Definir_TIME IS
+port(
+	CLK, controle: in std_logic;
+	Saida: out std_logic_vector(3 downto 0)
+	);
+end Definir_TIME;
+
+architecture ARCH_TIME of Definir_TIME is
+signal SaidaMentira: std_logic_vector(3 downto 0) := "0000";
+Begin
+process(CLK)
+	Begin
+	if(CLK'EVENT and CLK = '1') then
+		if controle = '1' then
+			if SaidaMentira = "1010" then
+				SaidaMentira = "0000";
+			else 
+				SaidaMentira <= SaidaMentira + 1;
+			end if;
+		else
+			if SaidaMentira = "0110" then
+				SaidaMentira = "0000";
+			else
+				SaidaMentira <= SaidaMentira + 1;
+			end if;
+		end if;
+	end if;
+	Saida <= SaidaMentira;
+end process;
+end ARCH_TIME;

@@ -1,0 +1,59 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY Contador_Sincrono_Dividido IS
+port(
+	clock, clear: in std_logic;
+	Q: out std_logic_vector(6 downto 0)
+	);
+end Contador_Sincrono_Dividido;
+
+architecture arch_Contador_Sincrono_Dividido of Contador_Sincrono_Dividido is
+signal temp: std_logic_vector(3 downto 0);
+signal oloco, oloco2, new_clock: std_logic;
+
+component FFD
+ PORT(
+ d, clk, clear: in std_logic;
+ q: out std_logic
+ );
+end component;
+
+component display_7
+port(
+		A: in std_logic_vector(3 downto 0);
+		S: out std_logic_vector(6 downto 0)	
+	);
+end component;
+
+component Divisor_Freq
+port(
+		clock: in std_logic;
+		cout: out std_logic
+	);
+end component;
+
+begin
+Divisor: Divisor_Freq
+	port map(clock => clock, cout => new_clock);
+
+Flipzin1: FFD
+	port map(d => (temp(0) xor '1'), clk => new_clock, clear => clear, q => temp(0));
+
+Flipzin2: FFD
+	port map(d => (temp(0) xor temp(1)), clk => new_clock, clear => clear, q => temp(1));
+	
+	oloco <= temp(0) and temp(1);
+
+Flipzin3: FFD
+	port map(d => (oloco xor temp(2)), clk => new_clock, clear => clear, q => temp(2));
+
+	oloco2 <= temp(0) and temp(1) and temp(2);
+	
+Flipzin4: FFD
+	port map(d => (oloco2 xor temp(3)), clk => new_clock, clear => clear, q => temp(3));
+	
+Display: display_7
+	port map(A => temp, S => Q);
+	
+end arch_Contador_Sincrono_Dividido;

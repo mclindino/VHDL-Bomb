@@ -1,0 +1,20 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+Use IEEE.std_logic_arith.all;
+Use IEEE.std_logic_unsigned;
+
+ENTITY Bombeador is
+	port(
+		
+	);
+end Bombeador;
+
+architecture arch_Bombeador of Bombeador is
+
+component Divisor_Freq
+port (
+		 CLK: in STD_LOGIC;
+		 COUT: out STD_LOGIC
+		 );
+ end Divisor_Freq;
+ end component;

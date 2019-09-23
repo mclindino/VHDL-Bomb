@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\andre\Desktop\KABUUM\simulation\qsim
+vBombeador
+Z1 IPQM43PLPz2Ab^KEU:J<Xi1
+Z2 V?`:V0Y80HHLIBe==WZ8`^0
+Z3 dC:\Users\andre\Desktop\KABUUM\simulation\qsim
+Z4 w1528168634
+Z5 8Bombeador.vo
+Z6 FBombeador.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Bombeador.vo|
+Z9 o-work work -O0
+Z10 n@bombeador
+!i10b 1
+Z11 !s100 ^H;m5<mUZMZVa;fA8meRd2
+!s85 0
+Z12 !s108 1528168635.813000
+Z13 !s107 Bombeador.vo|
+!s101 -O0
+vBombeador_vlg_check_tst
+!i10b 1
+Z14 !s100 BFcQ8@?]NBHk]7UY[>7<l3
+Z15 I[X5LLUkLY2_QMz7^kPj?B1
+Z16 V87_T@>OMf>IcfcMMONYYT3
+R3
+R4
+Z17 8Bombeador.vt
+Z18 FBombeador.vt
+L0 69
+R7
+r1
+!s85 0
+31
+Z19 !s108 1528168635.985000
+Z20 !s107 Bombeador.vt|
+Z21 !s90 -work|work|Bombeador.vt|
+!s101 -O0
+R9
+Z22 n@bombeador_vlg_check_tst
+vBombeador_vlg_sample_tst
+!i10b 1
+Z23 !s100 NKom=WX>SbI@bnl9N1]2L0
+Z24 I:EPjV:oV_?GB3ecKSCzG[1
+Z25 VjZB]CKDc0?M6AIUAfGnVZ3
+R3
+R4
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z26 n@bombeador_vlg_sample_tst
+vBombeador_vlg_vec_tst
+!i10b 1
+Z27 !s100 EB@oo:Cza[c0VKY[0o_=E0
+Z28 IZ[_CneKE9I<d<LGUPWd982
+Z29 VA=4omE5N@?QG_<i01kJH92
+R3
+R4
+R17
+R18
+Z30 L0 164
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z31 n@bombeador_vlg_vec_tst

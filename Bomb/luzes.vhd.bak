@@ -1,0 +1,50 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+
+ENTITY luzes is
+	port(
+		Clock: in std_logic;
+		Div_Controle: in std_logic_vector(1 downto 0);
+		Controle: in std_logic_vector(1 downto 0);
+		LuzesVerde: out std_logic_vector(7 downto 0);
+		LuzesVerme: out std_logic_vector(17 downto 0)
+	);
+end luzes;
+
+component Divisor_Freq
+	port(
+		 CLK: in std_logic;
+		 sel, sel_time: in std_logic_vector(1 downto 0);
+		 COUT: out std_logic
+);
+end component;
+
+Um_Seg: Divisor_Freq
+	port map(CLK => Clock, sel => Div_controle, sel_time => "00", COUT => Seg);
+
+architecture arch_luzes of luzes is
+signal Seg: std_logic;
+Begin
+process(Seg)
+	Begin
+	if controle = "10" then
+		if Seg = '1' then
+			LuzesVerme <= "111111111111111111";
+		elsif Seg = '0' then
+			LuzesVerme <= "000000000000000000";
+		end if;
+	if controle = "11" then
+		if Seg = '1' then
+			LuzesVerme <= "111111111111111111";
+		elsif Seg = '0' then
+			LuzesVerme <= "000000000000000000";
+		end if;
+	if controle = "00" then
+		LuzesVerde <= "11111111";
+	end if;
+	if controle = "01" then
+		LuzesVerme <= "11111111111111111";
+	end if;
+end process;
+end arch_luzes;
+		
